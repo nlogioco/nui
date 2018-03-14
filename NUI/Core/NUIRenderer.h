@@ -33,6 +33,7 @@
 #import "NUIViewRenderer.h"
 #import "NUIWindowRenderer.h"
 #import "UIView+NUI.h"
+#import "NUIImageViewRenderer.h"
 
 @interface NUIRenderer : NSObject
 
@@ -107,6 +108,9 @@
 
 + (void)renderWindow:(UIWindow*)window;
 + (void)renderWindow:(UIWindow*)window withClass:(NSString*)className;
+
++ (void)renderImageView:(UIImageView*)imageView;
++ (void)renderImageView:(UIImageView*)imageView withClass:(NSString*)className;
 
 + (BOOL)needsTextTransformWithClass:(NSString*)className;
 + (NSString *)transformText:(NSString*)text withClass:(NSString*)className;

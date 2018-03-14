@@ -239,6 +239,14 @@ static NUIRenderer *gInstance = nil;
     [NUIWindowRenderer render:window withClass:className];
 }
 
++ (void)renderImageView:(UIImageView*)imageView withClass:(NSString*)className {
+    [NUIImageViewRenderer render:imageView withClass:className];
+}
+
++ (void)renderImageView:(UIImageView*)imageView {
+    [NUIImageViewRenderer render:imageView withClass:@"ImageView"];
+}
+
 + (BOOL)needsTextTransformWithClass:(NSString*)className
 {
     return [NUILabelRenderer needsTextTransformWithClass:className];

@@ -102,6 +102,8 @@
 		7C5A17AE1CCE19BC001288C5 /* UIActivityIndicatorView+NUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C5A17AD1CCE19BC001288C5 /* UIActivityIndicatorView+NUI.m */; };
 		832B9C1B176AEADA0054F06E /* iPad Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 832B9C19176AEADA0054F06E /* iPad Storyboard.storyboard */; };
 		832B9C1E176AEAED0054F06E /* iPhone Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 832B9C1C176AEAED0054F06E /* iPhone Storyboard.storyboard */; };
+		87CF932D2059E04E00CFE4D3 /* UIImageView+NUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 87CF932C2059E04E00CFE4D3 /* UIImageView+NUI.m */; };
+		87CF93302059E0BC00CFE4D3 /* NUIImageViewRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 87CF932F2059E0BC00CFE4D3 /* NUIImageViewRenderer.m */; };
 		89B940701671418200850A9A /* NUIAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B940241671418100850A9A /* NUIAppearance.m */; };
 		89B940711671418200850A9A /* NUIConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B940261671418100850A9A /* NUIConverter.m */; };
 		89B940721671418200850A9A /* NUIGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B940281671418100850A9A /* NUIGraphics.m */; };
@@ -280,6 +282,10 @@
 		80CA9B780E980B9CA99F0367 /* Pods-NUIDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NUIDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NUIDemo/Pods-NUIDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		832B9C1A176AEADA0054F06E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = "en.lproj/iPad Storyboard.storyboard"; sourceTree = "<group>"; };
 		832B9C1D176AEAED0054F06E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = "en.lproj/iPhone Storyboard.storyboard"; sourceTree = "<group>"; };
+		87CF932B2059E04E00CFE4D3 /* UIImageView+NUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+NUI.h"; sourceTree = "<group>"; };
+		87CF932C2059E04E00CFE4D3 /* UIImageView+NUI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+NUI.m"; sourceTree = "<group>"; };
+		87CF932E2059E0BC00CFE4D3 /* NUIImageViewRenderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NUIImageViewRenderer.h; sourceTree = "<group>"; };
+		87CF932F2059E0BC00CFE4D3 /* NUIImageViewRenderer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NUIImageViewRenderer.m; sourceTree = "<group>"; };
 		89B940231671418100850A9A /* NUIAppearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NUIAppearance.h; sourceTree = "<group>"; };
 		89B940241671418100850A9A /* NUIAppearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NUIAppearance.m; sourceTree = "<group>"; };
 		89B940251671418100850A9A /* NUIConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NUIConverter.h; sourceTree = "<group>"; };
@@ -770,6 +776,8 @@
 				4A38831016C7268000DB99C2 /* NUIWindowRenderer.m */,
 				4E860DD61C9642EF006F3B0E /* NUITextInputTraitsRenderer.h */,
 				4E860DD71C9642EF006F3B0E /* NUITextInputTraitsRenderer.m */,
+				87CF932E2059E0BC00CFE4D3 /* NUIImageViewRenderer.h */,
+				87CF932F2059E0BC00CFE4D3 /* NUIImageViewRenderer.m */,
 			);
 			path = Renderers;
 			sourceTree = "<group>";
@@ -829,6 +837,8 @@
 				4A55F077167570C10056753C /* UIView+NUI.m */,
 				4A38831316C7269F00DB99C2 /* UIWindow+NUI.h */,
 				4A38831416C7269F00DB99C2 /* UIWindow+NUI.m */,
+				87CF932B2059E04E00CFE4D3 /* UIImageView+NUI.h */,
+				87CF932C2059E04E00CFE4D3 /* UIImageView+NUI.m */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -1187,7 +1197,9 @@
 				D983DF1F169DC87800A3A180 /* NUISliderRenderer.m in Sources */,
 				4ADA71C616A0F15C00BDCF81 /* UISearchBar+NUI.m in Sources */,
 				4ADA71CA16A103CD00BDCF81 /* NUISearchBarRenderer.m in Sources */,
+				87CF932D2059E04E00CFE4D3 /* UIImageView+NUI.m in Sources */,
 				D8E7168116B8AF4400686854 /* NUIControlRenderer.m in Sources */,
+				87CF93302059E0BC00CFE4D3 /* NUIImageViewRenderer.m in Sources */,
 				D8E7168516B9980300686854 /* UIControl+NUI.m in Sources */,
 				DBB82A8B1C5C2DDF00A483D3 /* NUIPageControlRenderer.m in Sources */,
 				4A38831116C7268000DB99C2 /* NUIWindowRenderer.m in Sources */,
