@@ -361,7 +361,7 @@ static NUIRenderer *gInstance = nil;
 }
 
 + (void)changeStylesheet:(NSString*)name {
-    [NUISettings loadStylesheetByName:name];
+    [NUISettings initWithStylesheet:name];
     [NUIRenderer rerender];
     [CATransaction flush];
 }
