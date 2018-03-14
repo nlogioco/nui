@@ -70,19 +70,6 @@ static NUISettings *instance = nil;
     instance.styles = [parser getStylesFromPath:path];
 }
 
-+ (void)loadStylesheetByName:(NSString*)name
-{
-    instance = [self getInstance];
-    instance.stylesheetName = name;
-    NUIStyleParser *parser = [[NUIStyleParser alloc] init];
-    instance.styles = [parser getStylesFromFile:name];
-}
-
-+ (NSString*)stylesheetName {
-    instance = [self getInstance];
-    return instance.stylesheetName;
-}
-
 + (void)reloadStylesheets
 {
     NUIStyleParser *parser = [[NUIStyleParser alloc] init];
