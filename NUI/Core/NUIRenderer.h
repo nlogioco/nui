@@ -122,4 +122,6 @@
 
 + (void)setRerenderOnOrientationChange:(BOOL)rerender;
 
++ (void)changeStylesheet:(NSString*)name;
+
 @end

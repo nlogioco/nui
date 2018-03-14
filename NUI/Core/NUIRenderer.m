@@ -360,4 +360,10 @@ static NUIRenderer *gInstance = nil;
     [CATransaction flush];
 }
 
++ (void)changeStylesheet:(NSString*)name {
+    [NUISettings loadStylesheetByName:name];
+    [NUIRenderer rerender];
+    [CATransaction flush];
+}
+
 @end
