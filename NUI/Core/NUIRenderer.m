@@ -378,4 +378,8 @@ static NUIRenderer *gInstance = nil;
     [CATransaction flush];
 }
 
++ (void)cycleStylesheets {
+    [self changeStylesheet: [NUISettings cycleStylesheets]];
+}
+
 @end

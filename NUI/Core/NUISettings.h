@@ -59,6 +59,7 @@
 + (NSMutableArray*)getGlobalExclusions;
 + (void)setGlobalExclusions:(NSArray*)globalExclusions;
 + (NSString *)stylesheetOrientation;
++ (NSString*)cycleStylesheets;
 
 @end
 

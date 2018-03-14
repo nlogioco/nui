@@ -43,8 +43,6 @@ static NUISettings *instance = nil;
         instance.additionalStylesheetNames = [NSMutableArray array];
     
     [instance.additionalStylesheetNames addObject:name];
-    NUIStyleParser *parser = [[NUIStyleParser alloc] init];
-    [instance appendStyles:[parser getStylesFromFile:name]];
 }
 
 - (void)appendStyles:(NSMutableDictionary*)newStyles
@@ -61,6 +59,24 @@ static NUISettings *instance = nil;
             styles[key][propertyKey] = propertyValue;
         }
     }
+}
+
++ (NSString*)cycleStylesheets {
+    instance = [self getInstance];
+    if(instance.additionalStylesheetNames) {
+        NSInteger indexOfStylesheet = [instance.additionalStylesheetNames indexOfObject:instance.stylesheetName];
+        if(indexOfStylesheet < instance.additionalStylesheetNames.count - 1) {
+            //Can iterate up one
+            return [instance.additionalStylesheetNames objectAtIndex:indexOfStylesheet + 1];
+        }else if(indexOfStylesheet == instance.additionalStylesheetNames.count - 1) {
+            //At end of array
+            if(instance.additionalStylesheetNames.count > 1) {
+                //Go to beginning of array
+                return [instance.additionalStylesheetNames objectAtIndex:0];
+            }
+        }
+    }
+    return instance.stylesheetName;
 }
 
 + (void)loadStylesheetByPath:(NSString*)path
