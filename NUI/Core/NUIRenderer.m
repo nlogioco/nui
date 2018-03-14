@@ -288,6 +288,18 @@ static NUIRenderer *gInstance = nil;
     for (UIWindow *window in [[UIApplication sharedApplication] windows]) {
         UIView *rootView = [[window rootViewController] view];
         [self rerenderView:rootView];
+        [self renderVC:[window rootViewController]];
+    }
+}
+
++ (void)renderVC:(UIViewController*)parentVC {
+    for(UIViewController *vc in [parentVC childViewControllers]) {
+        [self rerenderView:vc.view];
+        [self renderVC:vc];
+    }
+    if([parentVC presentedViewController]) {
+        [self rerenderView:[parentVC presentedViewController].view];
+        [self renderVC:[parentVC presentedViewController]];
     }
 }
 
