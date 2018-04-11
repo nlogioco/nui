@@ -24,6 +24,10 @@
             [button.layer.sublayers[1] setOpacity:0.0f];
         }
     }
+    
+    if ([NUISettings hasProperty:@"alpha" withClass:className]) {
+        [button setAlpha:[NUISettings getFloat:@"alpha" withClass:className]];
+    }
 
     // Set padding
     if ([NUISettings hasProperty:@"padding" withClass:className]) {

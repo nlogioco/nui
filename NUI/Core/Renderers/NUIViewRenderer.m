@@ -21,6 +21,10 @@
     } else if ([NUISettings hasProperty:@"background-color" withClass:className]) {
         [view setBackgroundColor: [NUISettings getColor:@"background-color" withClass: className]];
     }
+    
+    if ([NUISettings hasProperty:@"alpha" withClass:className]) {
+        [view setAlpha:[NUISettings getFloat:@"alpha" withClass:className]];
+    }
 
     [self renderSize:view withClass:className];
     [self renderBorder:view withClass:className];
