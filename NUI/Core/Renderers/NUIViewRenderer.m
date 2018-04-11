@@ -25,7 +25,7 @@
     if ([NUISettings hasProperty:@"alpha" withClass:className]) {
         [view setAlpha:[NUISettings getFloat:@"alpha" withClass:className]];
     }else {
-        [button setAlpha:1];
+        [view setAlpha:1];
     }
 
     [self renderSize:view withClass:className];
